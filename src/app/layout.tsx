@@ -2,17 +2,15 @@ import { auth } from "@/auth";
 import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
 import { SessionProvider } from "next-auth/react";
-import { Inter } from "next/font/google";
+
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+
 
 export const metadata: Metadata = {
-  title: "The Library",
-  description: "We're here to Increase your Productivity",
+   title: "VentureHub | Nurturing Visionary Growth",
+  description:
+    "VentureHub connects the world's most visionary founders with tactical capital and soul-led mentorship required to flourish sustainably.",
 };
 
 export default async function RootLayout({
@@ -25,9 +23,15 @@ export default async function RootLayout({
   return (
     <SessionProvider session={session}>
       <html lang="en">
-        <body className={inter.className}>
-            {children} <Toaster />
-        </body>
+      <head>
+          <link
+          rel="preconnect"
+          href="https://api.fontshare.com"
+          crossOrigin="anonymous"
+        />
+      </head>
+             <body className="antialiased">{children} <Toaster/></body>
+
       </html>
     </SessionProvider>
   );

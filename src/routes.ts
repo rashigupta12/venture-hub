@@ -6,7 +6,7 @@ export const DEFAULT_LOGIN_REDIRECT: string = "/dashboard";
 export const apiAuthPrefix: string = "/api/auth";
 
 // Routes which are accessible to all.
-export const publicRoutes: string[] = ["/", "/auth/verify-email"];
+export const publicRoutes: string[] = ["/", "/auth/verify-email", "/investors", "/startups" , "/cohort", "/mentorship", "/profile"];
 
 // APIs which are accessible to all.
 export const publicApis: string[] = [];
@@ -23,5 +23,5 @@ export const authRoutes: string[] = [
 // Routes which are protected with diffferent roles
 export const protectedRoutes: Record<string, Role[]> = {
   "^/dashboard/admin(/.*)?$": ["ADMIN"],
-  "^/dashboard/user(/.*)?$": ["USER"],
+  "^/dashboard/user(/.*)?$": ["STARTUP"],
 };
