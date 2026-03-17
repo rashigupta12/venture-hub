@@ -1,5 +1,5 @@
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 
 import { NextRequest } from "next/server";
 import { UserRole } from "@/db/schema";

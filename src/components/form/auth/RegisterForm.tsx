@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 
 
 "use client"
@@ -45,7 +45,7 @@ const RegisterForm = ({ text, role }: RegisterFormProps) => {
       email: "",
       mobile: "",
       password: "",
-      role: "USER",
+      role: "STARTUP",
     },
   });
 
